@@ -1,0 +1,302 @@
+html {
+    font-size: 62.5%;
+    /* 1.6rem x 62.5 = 1.0rem = 1rem */
+    /* box-sizing: border-box; */
+  }
+
+.main-content {
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: relative;
+    flex-wrap: wrap;
+    padding: 0 2.0rem;
+    max-width: 76.0rem;
+    margin: 0 auto;
+}
+
+.main-content:before {
+    content: "";
+    display: block;
+    position: fixed;
+    width: 300%;
+    height: 100%;
+    top: 50%;
+    left: 50%;
+    border-radius: 100%;
+    transform: translateX(-50%) skewY(-8deg);
+    background-color: #f6c90e;
+    z-index: -1;
+    animation: wave 8s ease-in-out infinite alternate;
+}
+@keyframes wave {
+    from {left: .0rem;}
+    to {left: 40.0rem;}
+}
+
+.main-content .card {
+    background-color: #fff;
+    box-sizing: border-box;
+    width: 36.0rem;
+    height: 60.0rem;
+    box-shadow: 0 3..2rem 2..2rem rgb(0 0 0 / 2%), 0 .7rem 5..4rem rgb(0 0 0 / 3%), 0 12..1rem 10..1rem rgb(0 0 0 / 4%), 0 19..8rem 18..1rem rgb(0 0 0 / 4%), 0 34..7rem 33..8rem rgb(0 0 0 / 5%), 0 8.1rem 8.1rem rgb(0 0 0 / 7%);
+    border-radius: 3.0rem;
+    overflow: hidden;
+    padding: 0 2.8rem;
+    position: relative;
+    margin-bottom: 2.0rem;
+}
+
+.main-content .card:before {
+    content: "";
+    display: block;
+    position: absolute;
+    width: 30.0rem;
+    height: 30.0rem;
+    border-radius: 100%;
+    background-color: #f6c90e;
+    top: -20%;
+    left: -50%;
+    z-index: 0;
+}
+
+.main-content .card .card-top {
+    margin: 1.2rem 0;
+    position: relative;
+}
+
+.main-content .card .card-top .card-top-logo {
+    display: block;
+    width: 5.0rem;
+}
+
+.main-content .card .card-title {
+    font-size: 2.4rem;
+    font-weight: 700;
+    margin: 1.6rem 0;
+    position: relative;
+}
+
+.main-content .card .card-body {
+    height: calc(100% - 9.8rem);
+    position: relative;
+    overflow-y: scroll;
+}
+.card-body::-webkit-scrollbar {
+    display: none;
+}
+        
+/* ------ Shop -----  */
+.shop-item:first-child {
+    padding-top: 0;
+}
+
+.shop-item {
+    padding: 4.0rem 0;
+}
+
+.shop-item .shop-item-image {
+    border-radius: 3.0rem;
+    height: 38.0rem;
+    display: flex;
+    align-items: center;
+    overflow: hidden;
+}
+
+.shop-item .shop-item-image img {
+    display: block;
+    width: 100%;
+    filter: drop-shadow(0 3.0rem 2.0rem rgba(0, 0, 0, .2));
+    transform: rotate(-24deg);
+    margin-left: -1.6rem;
+}
+
+.shop-item .shop-item-name {
+    font-size: 2.0rem;
+    font-weight: 700;
+    margin: 2.6rem 0 2.0rem;
+    line-height: 1.5;
+}
+
+.shop-item .shop-item-description {
+    font-size: 1.3rem;
+    color: #777;
+    line-height: 1.8;
+    margin-bottom: 2.0rem;
+}
+
+.shop-item .shop-item-bottom {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.shop-item .shop-item-bottom .shop-item-price {
+    font-size: 1.8rem;
+    font-weight: 700;
+}
+.shop-item .shop-item-bottom .shop-item-button {
+    cursor: pointer;
+    background-color: #f6c90e;
+    font-weight: 700;
+    font-size: 1.4rem;
+    box-sizing: border-box;
+    width: auto;
+    height: 4.6rem;
+    min-width: 4.6rem;
+    padding: 1.6rem 2.0rem;
+    border-radius: 10.0rem;
+    transition: all .25s ease;
+    user-select: none;
+    white-space: nowrap;
+    position: relative;
+    display: flex;
+    align-items: center;
+    overflow: hidden;
+}
+
+.shop-item-button .inactive {
+    width: 4.6rem;
+    pointer-events: none;
+    cursor: default;
+}
+.shop-item-button-cover {
+    width: 1.6rem;
+    height: 1.6rem;
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.shop-item-button-cover-check-icon{
+    width: 120%;
+    height: 120%;
+    transform: translate(-80%,-52%) rotate(-13deg);
+    position: absolute;
+    left: 50%;
+    top: 50%;
+}
+
+/* ----- card ----- */
+.cart-item {
+    display: flex;
+    padding: 2.0rem 0;
+}
+
+
+.card-title-amount {
+    float: right;
+}
+.cart-item .cart-item-left {
+    flex: 0;
+}
+
+
+.cart-item .cart-item-left .cart-item-image {
+    width: 9.0rem;
+    height: 9.0rem;
+    border-radius: 100%;
+    background-color: #eee;
+    margin-right: 3.4rem;
+}
+.cart-item .cart-item-left .cart-item-image-block img {
+    display: block;
+    width: 140%;
+    transform: rotate(-28deg) translateY(-4.0rem);
+    filter: drop-shadow(0 3.0rem 2.0rem rgba(0,0,0,.2));
+}
+
+.cart-item .cart-item-right {
+    flex: 1;
+}
+ .cart-item-right .cart-item-name {
+    font-size: 1.4rem;
+    font-weight: 700;
+    line-height: 1.5;
+    margin-bottom: 1.0rem;
+}
+ .cart-item-right .cart-item-price {
+    font-size: 2.0rem;
+    font-weight: 700;
+    margin-bottom: 1.6rem;
+}
+.cart-item-right .cart-item-actions, .cart-item-count {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+}
+.cart-item-right .cart-item-count {
+    flex: 1;
+}
+
+.cart-item-right .cart-item-count-button {
+    cursor: pointer;
+    width: 2.8rem;
+    height: 2.8rem;
+    line-height: 2.8rem;
+    border-radius: 100%;
+    background-color: #eee;
+    font-size: 1.6rem;
+    font-weight: 700;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: .2s;
+    user-select: none;
+}
+
+.cart-item-right .cart-item-count-number {
+    font-size: 1.4rem;
+    margin: 0 .8rem;
+    width: 2.0rem;
+    text-align: center;
+}
+.cart-item-right .cart-item-remove {
+    width: 2.8rem;
+    height: 2.8rem;
+    cursor: pointer;
+    transition: all .25s ease;
+    border-radius: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #f6c90e;
+    transition: .2s;
+    user-select: none;
+}
+.cart-item-right .cart-item-remove img {
+    width: 1.6rem;
+    height: 1.6rem;
+}
+
+.cart-empty {
+    position: absolute;
+}
+
+.cart-empty-text {
+    font-size: 1.4rem;
+}
+
+
+
+
+
+/* media queries  */
+
+@media (max-width:991px){
+
+    html{
+        font-size: 55%;
+    }
+
+}
+
+
+@media (max-width:450px){
+
+    html{
+        font-size: 50%;
+    }
+
+}
