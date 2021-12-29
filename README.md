@@ -4,4 +4,4 @@ Sau khi tải về vào trong souce code dùng lệnh 'npm i' để tải thư v
 
 Dùng lệnh 'npm start' để chạy bài 
 
-Demo: https://demo-golden-shoe-hda.herokuapp.com/
+Demo: https://demo-golden-shoe-ahd.herokuapp.com/
